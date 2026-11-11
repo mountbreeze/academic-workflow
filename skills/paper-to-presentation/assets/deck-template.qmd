@@ -1,0 +1,60 @@
+---
+title: "Paper Presentation"
+subtitle: "Replace with the paper title and verified author citation"
+author: "Presenter name"
+format:
+  revealjs:
+    theme: default
+    width: 1280
+    height: 720
+    center: false
+    slide-number: true
+    transition: none
+    incremental: false
+    embed-resources: true
+    html-math-method: katex
+    self-contained-math: true
+    pdf-separate-fragments: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## A claim supported by the paper {#main-claim}
+
+Replace this instructional text with the approved slide's central exhibit and interpretation.
+
+::: {.notes}
+Replace with the narration in the requested language. Match its duration to the storyboard.
+:::
+
+## A visual explanation {#visual-explanation}
+
+Replace with an original figure or an accurately reconstructed local exhibit. Label conceptual and simulated visuals explicitly.
+
+Source: replace with verified author/year, page or exhibit, and claim ID.
+
+::: {.notes}
+Explain how to read the exhibit, the conclusion it supports, and its main limitation.
+:::
+
+## Main conclusion {#conclusion}
+
+Replace with the evidence-bounded takeaway.
+
+[Technical details](#appendix-derivation)
+
+::: {.notes}
+Close the main narrative within the agreed speaking budget.
+:::
+
+## Appendix: derivation {#appendix-derivation}
+
+Replace with the paper's verified notation and derivation.
+
+[Back to conclusion](#conclusion)
+
+::: {.notes}
+Prepare this explanation for questions. Exclude it from the main speaking budget.
+:::
