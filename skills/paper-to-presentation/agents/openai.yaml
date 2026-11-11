@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper to Presentation"
+  short_description: "Read papers deeply and build evidence-grounded slides"
+  default_prompt: "Use $paper-to-presentation to explain this paper, trace its key claims to the source, and create a visual research presentation."
