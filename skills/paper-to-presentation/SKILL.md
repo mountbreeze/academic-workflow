@@ -124,6 +124,10 @@ Use progressive reveals only to explain a dependency, term, comparison, or stage
 - Inspect the final PDF separately when exported. Confirm slides with animations retain their full meaning and essential assets. Test offline operation before claiming a deck is offline-ready.
 - Report verification actually performed and any unresolved limitations. Do not equate a successful render with visual or scientific correctness.
 
+## Rendering workflow
+
+Before creating presentation source, rendering, previewing, exporting PDF, or answering how to render, read [references/rendering.md](references/rendering.md). Use [assets/deck-template.qmd](assets/deck-template.qmd) as the built-in Quarto reveal.js starting point when that route is appropriate. Follow its source-authoring, local preview, speaker-view, PDF export, validation, and missing-tool procedures. Keep storyboard-only requests unrendered. Report separately what was authored, rendered, exported, and inspected.
+
 ## Deliverables and completion
 
 Scale output to the requested mode:
