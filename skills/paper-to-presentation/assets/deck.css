@@ -1,0 +1,26 @@
+:root {
+  --paper-blue: #187cbb;
+  --paper-ink: #17324d;
+  --paper-rule: #b8d0e2;
+}
+.reveal {font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;color:var(--paper-ink);font-size:28px;background:#f7fbff;}
+.reveal h1,.reveal h2,.reveal h3 {font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;color:#10466f;text-transform:none;font-weight:600;}
+.reveal h2 {font-size:1.25em;line-height:1.2;margin:0 0 28px;}
+.reveal a {color:var(--paper-blue);}
+.reveal .slides>section,.reveal .slides>section>section {box-sizing:border-box;height:650px;padding:10px 0 56px;}
+.reveal p,.reveal li {line-height:1.45;}
+.reveal table {font-size:.8em;}
+.reveal img {max-width:100%;object-fit:contain;}
+.reveal .cover-title {white-space:nowrap;letter-spacing:-.035em;font-size:1.75em;line-height:1.15;text-align:center;color:var(--paper-blue);margin-top:90px;}
+.reveal .cover-subtitle {font-size:.78em;line-height:1.4;text-align:center;font-style:italic;color:#4795c5;margin-top:1.5em;}
+.reveal .cover-byline {font-size:.65em;line-height:1.7;text-align:center;margin-top:2em;}
+.reveal .cover>h2:empty {display:none;}
+.reveal .closing>h2 {white-space:nowrap;}
+.reveal .deck-nav {position:absolute;bottom:8px;left:0;right:0;z-index:30;display:flex;align-items:center;gap:13px;border-top:1px solid var(--paper-rule);padding-top:9px;font:500 13px/1.2 "Avenir Next","Helvetica Neue",Arial,sans-serif;}
+.reveal .deck-nav a {color:#426580;white-space:nowrap;text-decoration:none;}
+.reveal .deck-nav a:hover {color:var(--paper-blue);text-decoration:underline;}
+.reveal .deck-nav a[aria-current="true"] {font-weight:700;color:#10466f;}
+.reveal .deck-page {margin-left:auto;white-space:nowrap;color:#426580;font-variant-numeric:tabular-nums;}
+.reveal .slide-number,.reveal .slide-number-pdf {display:none!important;}
+.reveal .interpretation {font-size:.8em;line-height:1.5;border-top:2px solid var(--paper-rule);padding-top:.6em;margin-top:.7em;color:#10466f;}
+@media print {.reveal .deck-nav {display:flex!important;} .reveal .slide-number,.reveal .slide-number-pdf {display:none!important;}}

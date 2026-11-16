@@ -1,4 +1,4 @@
 interface:
   display_name: "Paper to Presentation"
-  short_description: "Read papers deeply and build evidence-grounded slides"
-  default_prompt: "Use $paper-to-presentation to explain this paper, trace its key claims to the source, and create a visual research presentation."
+  short_description: "Explain papers in Chinese and build blue bilingual academic slides"
+  default_prompt: "Use $paper-to-presentation to explain this paper in Chinese, derive the technical core step by step, and create a detailed blue English presentation with English speaker notes above Chinese notes, numbered headings, persistent page navigation, key findings, and implications."

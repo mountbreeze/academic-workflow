@@ -8,12 +8,14 @@ description: Read academic papers deeply and transform their arguments into evid
 ## Operating defaults
 
 - Select the requested mode: read, storyboard, present, or end-to-end. Do not produce a deck for a reading-only request.
-- Write reading explanations in the user's conversation language. Default to English slides and speaker notes in the conversation language. Override either when requested. Keep this skill and its reusable templates in English.
+- Default to detailed Chinese reading explanations, English slides, and bilingual speaker notes on EVERY slide: a complete English narration first, followed by its Chinese counterpart. Override only when the user requests a different language. Keep reusable workflow instructions in English.
 - Preserve original mathematical notation and important English technical terms.
-- For an unspecified presentation brief, state provisional defaults: a 12-minute graduate journal-club talk, 8–10 main slides plus a focused appendix, for an audience familiar with basic statistics. Use a different brief when available in the conversation.
+- For an unspecified presentation brief, use a detailed learning presentation with step-by-step derivations. Set the slide count from the material, without a fixed page cap or a presumed 12-minute limit. When the user specifies a speaking time, create a focused main narrative and place supporting derivations in an appendix or a separate detailed version. State when the detailed version exceeds the requested time.
 - Ask only for missing information that materially prevents useful work. Continue source inspection and reading independently. Do not require approval between ordinary stages; pause after a storyboard only if the user requests a checkpoint.
 - Use available tools rather than assuming a particular model, connector, absolute path, API key, or institutional integration. Do not install software, connect accounts, publish, or modify this skill merely to read a paper.
 - For file deliverables, follow the current environment's storage and artifact instructions. Read the applicable PDF, document, presentation, or visualization guidance before creating those artifacts.
+
+- Read [references/user-requirements.md](references/user-requirements.md) before reading or presenting a paper. Treat its confirmed defaults as part of this workflow; the user's latest explicit instructions override them. Preserve the user's edits when revising a deck.
 
 ## 1. Establish the source
 
@@ -66,6 +68,8 @@ For empirical work, identify assignment, treatment/exposure, comparison, outcome
 
 For predictive or structural work, explain the objective, estimation, validation, parameter interpretation, and counterfactual assumptions. For theory, separate intuition, formal statement, proof steps, and comparative statics.
 
+When a derivation requires probability, integration, Bayesian updating, an identity, or a special function, introduce that prerequisite in plain Chinese and show the intermediate algebra. Distinguish a model assumption from a derived implication. Reproduce reported numerical comparisons from inputs through the final denominator, timing convention, and rounding. Do not skip steps merely because the source calls them standard. See the detailed teaching sequence in references/user-requirements.md.
+
 End the reading with a few substantive limitations, transferable ideas, and unresolved questions. Relate them to the user's research only when there is a concrete connection; do not force relevance.
 
 ## 5. Design the visual argument
@@ -80,7 +84,7 @@ Write a storyboard before slide bodies:
 | --- | --- | --- | --- | --- | --- |
 | 1 | [Question] | [Evidence-bounded takeaway] | [Visual] | [C1; locator] | [Narrative and seconds] |
 
-Read titles in order to check the argument. Prefer short assertion titles whose causal language matches the evidence. Use one primary intellectual task per slide. Adapt the number of slides to the actual time needed for complex exhibits rather than applying a fixed slides-per-minute rule.
+Read titles in order to check the argument. Use clear, numbered titles whose causal language matches the evidence. Prefer informative statements or descriptive academic titles over slogans; keep necessary nuance in a complete explanatory sentence. Use one primary intellectual task per slide. Adapt the number of slides to the actual time needed for complex exhibits rather than applying a fixed slides-per-minute rule.
 
 Choose a structure appropriate to the contribution:
 
@@ -89,7 +93,7 @@ Choose a structure appropriate to the contribution:
 - Theory/model: question, setup, assumptions, core result, intuition, comparative statics, implications and boundaries.
 - Method/framework: problem, pipeline overview, stages with a recurring roadmap, validation, limitations and applications.
 
-Build an appendix for technical derivations, full specifications, robustness, and anticipated questions. Keep the main conclusion visible at the end of the main narrative.
+In detailed mode, include essential derivations in the main sequence, one logical step per slide. Use an appendix for additional identities, full specifications, robustness, and anticipated questions. In timed-talk mode, move supporting derivations to the appendix to respect the speaking budget. Keep the main conclusion visible at the end of the main narrative.
 
 ## 6. Translate evidence into visuals
 
@@ -117,8 +121,9 @@ Use progressive reveals only to explain a dependency, term, comparison, or stage
 - Honor the requested format. Use the environment's presentation workflow for PPTX or Google Slides. Prefer editable source plus PDF where supported.
 - Use Quarto/reveal.js for a requested browser-based academic deck when the toolchain is available. Do not assume the upstream repository's extensions or scripts are installed. Inspect official documentation if implementation behavior is uncertain.
 - If the preferred renderer is unavailable, disclose that constraint and use a supported format or deliver verified content and source. Never label unrendered source as a completed, tested deck.
-- Put concise evidence and necessary formal statements on slides. Put explanation, intuition, transitions, and anticipated caveats in speaker notes. Keep caveats necessary to interpret a claim visible on the slide as well.
-- Cite borrowed claims and exhibits on the relevant slide. Verify bibliographic metadata; do not generate missing fields from memory. Use an attribution line for reproduced or adapted exhibits.
+- Put evidence, key findings, implications, and necessary formal statements on slides. Use complete, clear explanations for findings and figure interpretations instead of slogan-like fragments. Put detailed narration, intuition, transitions, and anticipated caveats in bilingual notes. Keep caveats necessary to interpret a claim visible on the slide.
+- Preserve exact provenance in the evidence index and speaker notes. Do not display internal claim IDs or locator strings such as C4–C5 · §3, pp.87–88 on audience slides. Retain concise human-readable author/year attribution where needed for borrowed exhibits and a formal references appendix. Verify bibliographic metadata rather than generating missing fields from memory.
+- Apply the blue theme, Avenir Next with portable fallbacks, single-line cover and closing titles, section/subsection numbering, and permanent per-slide navigation specified in references/user-requirements.md. Use a single consistent page count including the appendix.
 - Render and inspect every slide, including reveal states when used. Check clipping, overlap, readable figures, contrast, mathematical rendering, attribution, and appendix links. Revise or split crowded slides instead of shrinking everything.
 - Verify all principal numerical claims and formulas against the ledger. Check that conclusions do not exceed the evidence.
 - Inspect the final PDF separately when exported. Confirm slides with animations retain their full meaning and essential assets. Test offline operation before claiming a deck is offline-ready.
@@ -142,8 +147,8 @@ Do not create empty deliverables or claim unsupported outputs. Reuse verified wo
 ## Example invocations
 
 - "Use $paper-to-presentation to explain this paper in Chinese. Focus on identification and derive the main equations. Do not make slides yet."
-- "Use $paper-to-presentation to turn this paper into a 12-minute journal-club presentation. Use English slides and Chinese speaker notes. Include a visual explanation of the design and an evidence-linked appendix."
-- "Use $paper-to-presentation in end-to-end mode. Explain the paper in Chinese, then create an English visual presentation with English speaker notes. Label simulations and keep empirical results traceable to the paper."
+- "Use $paper-to-presentation to prepare a detailed learning presentation. Explain the paper in Chinese, derive its equations step by step, and create blue English slides with English notes above Chinese notes, numbered titles, page counts, and clickable navigation."
+- "Use $paper-to-presentation in end-to-end mode. Explain the paper in Chinese, then create a 12-minute English presentation with bilingual notes (English first). Keep full derivations in the appendix and make findings, implications, and limitations explicit."
 - "Use $paper-to-presentation to produce only a storyboard for this paper, then wait for my feedback before rendering the deck."
 
 ## Attribution

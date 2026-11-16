@@ -1,0 +1,70 @@
+<script>
+(function () {
+  function installNavigation() {
+    if (!window.Reveal || !Reveal.isReady()) return;
+    var slides = Reveal.getSlides();
+    var currentSection = "1";
+    var counts = {};
+    var sections = [];
+    slides.forEach(function (slide) {
+      if (!slide.id) throw new Error("Every slide needs a stable ID for navigation.");
+      if (slide.classList.contains("cover") || slide.classList.contains("roadmap")) return;
+      var section = slide.dataset.section || (slide.classList.contains("appendix") ? "A" : currentSection);
+      currentSection = section;
+      var heading = slide.querySelector("h2");
+      counts[section] = (counts[section] || 0) + 1;
+      if (!sections.some(function (item) { return item.section === section; })) {
+        sections.push({section:section,id:slide.id,label:slide.dataset.sectionTitle || (section === "A" ? "Appendix" : "Section " + section)});
+      }
+      if (heading && !heading.dataset.paperNumbered) {
+        heading.prepend(document.createTextNode(section + "." + counts[section] + " "));
+        heading.dataset.paperNumbered = "true";
+      }
+      slide.dataset.paperSection = section;
+    });
+    var contents = slides.find(function (slide) { return slide.classList.contains("roadmap"); }) || slides[0];
+    function link(text, target, label) {
+      var a = document.createElement("a");
+      a.textContent = text;
+      a.href = "#" + target;
+      a.setAttribute("aria-label", label || text);
+      a.addEventListener("click", function (event) {
+        if (new URLSearchParams(window.location.search).has("print-pdf")) return;
+        var targetSlide = document.getElementById(target);
+        if (!targetSlide) return;
+        event.preventDefault();
+        var index = Reveal.getIndices(targetSlide);
+        Reveal.slide(index.h, index.v, -1);
+      });
+      return a;
+    }
+    slides.forEach(function (slide, i) {
+      var previous = slide.querySelector(":scope > nav.deck-nav");
+      if (previous) previous.remove();
+      var nav = document.createElement("nav");
+      nav.className = "deck-nav no-stage";
+      nav.setAttribute("aria-label", "Slide navigation");
+      nav.append(link("‹ Prev", slides[Math.max(0,i-1)].id, "Previous slide"));
+      nav.append(link("Contents", contents.id));
+      sections.forEach(function (item) {
+        var a = link(item.section === "A" ? "Appendix" : item.section,item.id,item.label);
+        if (slide.dataset.paperSection === item.section) a.setAttribute("aria-current","true");
+        nav.append(a);
+      });
+      nav.append(link("Next ›", slides[Math.min(slides.length-1,i+1)].id, "Next slide"));
+      var count = document.createElement("span");
+      count.className = "deck-page";
+      count.textContent = (i+1) + " / " + slides.length;
+      nav.append(count);
+      slide.append(nav);
+    });
+    Reveal.layout();
+  }
+  if (window.Reveal && Reveal.isReady()) installNavigation();
+  else if (window.Reveal) Reveal.on("ready", installNavigation);
+  else document.addEventListener("DOMContentLoaded", function () {
+    if (window.Reveal && Reveal.isReady()) installNavigation();
+    else if (window.Reveal) Reveal.on("ready", installNavigation);
+  }, {once:true});
+})();
+</script>

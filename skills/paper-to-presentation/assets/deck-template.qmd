@@ -1,17 +1,19 @@
 ---
-title: "Paper Presentation"
-subtitle: "Replace with the paper title and verified author citation"
-author: "Presenter name"
 format:
   revealjs:
     theme: default
-    width: 1280
-    height: 720
+    width: 1050
+    height: 700
+    margin: 0.05
+    title-slide: false
     center: false
-    slide-number: true
+    slide-number: false
+    controls: false
     transition: none
     incremental: false
     embed-resources: true
+    css: deck.css
+    include-after-body: deck-nav.html
     html-math-method: katex
     self-contained-math: true
     pdf-separate-fragments: false
@@ -21,40 +23,149 @@ execute:
   message: false
 ---
 
-## A claim supported by the paper {#main-claim}
+##  {.cover #title-slide}
 
-Replace this instructional text with the approved slide's central exhibit and interpretation.
-
-::: {.notes}
-Replace with the narration in the requested language. Match its duration to the storyboard.
+::: {.cover-title}
+Replace with a clear one-line title
 :::
 
-## A visual explanation {#visual-explanation}
-
-Replace with an original figure or an accurately reconstructed local exhibit. Label conceptual and simulated visuals explicitly.
-
-Source: replace with verified author/year, page or exhibit, and claim ID.
-
-::: {.notes}
-Explain how to read the exhibit, the conclusion it supports, and its main limitation.
+::: {.cover-subtitle}
+Replace with the verified paper title
 :::
 
-## Main conclusion {#conclusion}
+::: {.cover-byline}
+Verified authors, venue, year
 
-Replace with the evidence-bounded takeaway.
-
-[Technical details](#appendix-derivation)
-
-::: {.notes}
-Close the main narrative within the agreed speaking budget.
+Presented by presenter name
 :::
 
-## Appendix: derivation {#appendix-derivation}
+::: {.notes}
+**English**
 
-Replace with the paper's verified notation and derivation.
+Replace with a full introduction to the research question and the presentation.
+
+**中文**
+
+替换为研究问题与演讲内容的完整中文介绍。
+:::
+
+## Presentation roadmap {.roadmap #roadmap}
+
+1. [Question and benchmark](#benchmark)
+2. [Model, design, and derivation](#technical-core)
+3. [Findings and implications](#key-findings)
+4. [Technical appendix](#appendix-derivation)
+
+::: {.notes}
+**English**
+
+Introduce the sequence of the argument and explain that the contents and bottom navigation are clickable.
+
+**中文**
+
+介绍论证顺序，并说明目录与页脚导航可点击跳转。
+:::
+
+## The benchmark and its assumptions {#benchmark data-section="1" data-section-title="Question and benchmark"}
+
+Replace with the conventional approach, what it assumes, and the question it leaves unresolved. Reconstruct numerical headline comparisons completely on additional pages when relevant.
+
+::: {.notes}
+**English**
+
+Explain the benchmark in plain language. Record verified source locators and claim IDs here rather than in a dense audience-facing footer.
+
+**中文**
+
+用通俗语言解释传统方法，在这里保留核实过的来源定位和证据编号，不将内部定位密集展示在幻灯片上。
+:::
+
+## The technical core {#technical-core data-section="2" data-section-title="Model and derivation"}
+
+Replace with the paper's verified notation. Split the actual explanation into prerequisite, assumption, substitution, intermediate derivation, and interpretation pages as needed.
+
+$$
+\text{Replace this placeholder with the paper's verified expression.}
+$$
+
+::: {.notes}
+**English**
+
+Define every symbol and conditioning event. Explain this step and why the next step follows, with a numerical example where useful.
+
+**中文**
+
+定义每个符号与条件事件，说明这一步的含义和下一步成立的原因，适当配合数值例子。
+:::
+
+## Key findings {#key-findings data-section="3" data-section-title="Findings and implications"}
+
+Replace with substantive, evidence-bounded findings. Explain verified magnitudes, mechanism, and conditions in complete sentences rather than slogan fragments.
+
+::: {.notes}
+**English**
+
+Synthesize what the paper establishes and explain the evidence supporting each finding.
+
+**中文**
+
+总结论文确立了哪些结论，解释每个结论的证据依据。
+:::
+
+## Implications {#implications}
+
+Replace with concrete managerial, theoretical, or methodological implications. Separate the paper's conclusions from the presenter's extensions, and identify conditions needed for decisions or causal claims.
+
+::: {.notes}
+**English**
+
+Explain what changes for a decision maker or researcher and what additional information is still required.
+
+**中文**
+
+解释这些结果对决策者或研究者意味着什么，以及还需要哪些额外信息。
+:::
+
+## Conclusion {#conclusion .closing}
+
+Replace with a clear statement connecting the mechanism, evidence, and practical interpretation. Add limitations in a separate slide when they require explanation.
+
+::: {.notes}
+**English**
+
+Close the argument in complete sentences and identify its main boundary.
+
+**中文**
+
+用完整表述收束论证，并指出主要适用边界。
+:::
+
+## Supporting derivation {.appendix #appendix-derivation data-section="A" data-section-title="Appendix"}
+
+Replace with additional identities, robustness details, or anticipated questions. Keep central derivations in the main deck in detailed mode.
 
 [Back to conclusion](#conclusion)
 
 ::: {.notes}
-Prepare this explanation for questions. Exclude it from the main speaking budget.
+**English**
+
+Prepare a full explanation for questions, using the same notation as the main deck.
+
+**中文**
+
+使用与正文一致的符号，为问答准备完整讲解。
+:::
+
+## References {.appendix #references data-section="A"}
+
+Replace with verified bibliographic details. Keep detailed slide-to-source mapping in evidence-index.md.
+
+::: {.notes}
+**English**
+
+Identify the article version and technical appendix actually inspected.
+
+**中文**
+
+注明实际核查的文章版本与技术附录。
 :::

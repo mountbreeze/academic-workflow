@@ -21,22 +21,32 @@ A request for instructions or for this skill to gain rendering support does not 
 
 ## 2. Build the source from the approved storyboard
 
-Copy assets/deck-template.qmd from this skill into a new presentation project as deck.qmd. This uses Quarto's built-in revealjs format, with no upstream custom extension required.
+Read user-requirements.md first. Copy assets/deck-template.qmd into a new presentation project as deck.qmd, and copy assets/deck.css and assets/deck-nav.html alongside it. This uses Quarto's built-in revealjs format, with no upstream custom extension required.
 
-Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. Preserve the main-slide timing budget. Include English slide text and the requested language of speaker notes inside each slide's notes div.
+Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. In detailed mode, allocate one logical derivation step per slide without a fixed page cap. In a timed talk, preserve the main-slide timing budget. Include English slide text and complete bilingual notes on every page, with English first and Chinese second.
 
 Place original or reproducible exhibits in assets/. Keep a compact evidence-index.md linking slide numbers to claim IDs, original exhibit numbers, printed and PDF pages, and visual provenance. Preserve chart-generation code and exact inputs when charts are reconstructed.
 
-Use Markdown headings beginning with ## for slides. Add stable heading IDs for appendix navigation. Add a source footer to every substantive slide. Keep citations short but identify the paper, page/exhibit, and claim IDs. A verified .bib file is optional for a single-paper talk; if used, configure bibliography and validate its metadata.
+Use Markdown headings beginning with ## for slides. Add stable heading IDs for appendix navigation. Keep exact source pages/exhibits and internal claim IDs in the evidence index and notes, rather than in audience-facing source footers. Retain necessary concise attribution for reproduced exhibits and a formal references appendix. A verified .bib file is optional for a single-paper talk; if used, configure bibliography and validate its metadata.
 
 Keep notes inside:
 ```markdown
 ::: {.notes}
-Write the speaker's actual narration here.
+**English**
+
+Write the speaker's actual English narration here.
+
+**中文**
+
+写出对应的完整中文讲解。
 :::
 ```
 
-Keep a separate speaker-notes.md in the requested language as a fallback. Notes embedded in HTML can be read by anyone who receives the source or HTML, even though they are absent from the audience slide view.
+Keep a separate speaker-notes.md with the same English-first, Chinese-second order on each page as a fallback. Notes embedded in HTML can be read by anyone who receives the source or HTML, even though they are absent from the audience slide view.
+
+The template includes a blue theme, heading numbering, permanent linked navigation and one whole-deck page counter. For each section start, set data-section to its number and data-section-title to its label on the heading. Mark appendix slides with data-section="A" and class appendix. Keep IDs stable. The cover uses an unnumbered empty heading and a one-line .cover-title block. Keep .no-stage on navigation if adding another staging filter, and test that no ancestor hides the navigation in an initial slide state.
+
+The navigation include generates actual same-document anchor links on every slide after Reveal initializes. It numbers content headings from their section attributes and computes the page count from the current deck. It does not rely on a custom upstream theme. Test generated controls in both the interactive deck and browser print mode.
 
 Use local figures and static exports of essential interactive exhibits. Do not rely on an online widget for the only representation of a result. Use compatible LaTeX math in the default KaTeX route. For advanced MathJax-only macros, select MathJax deliberately, document the dependency, and test offline behavior separately.
 
@@ -74,7 +84,7 @@ Use the rendered reveal.js print view in Chrome or Chromium:
 
 The template sets pdf-separate-fragments: false so a handout normally shows the final state of each slide. Verify this in the exported file. Overlaid exhibits or mutually exclusive animation states can collide in print; author static alternatives where needed.
 
-Keep Chinese notes in the separate notes file by default. Do not assume that an audience PDF includes presenter notes. If the user requests a notes PDF, configure and inspect that version separately using the installed Quarto version's documented options.
+Keep bilingual notes in the separate notes file by default. Do not assume that an audience PDF includes presenter notes. If the user requests a notes PDF, configure and inspect that version separately using the installed Quarto version's documented options.
 
 Use a supported automated browser/export route if one is already available, but inspect the generated PDF and record the actual tool/version. Do not invent an automatic export command or silently install a new dependency.
 
@@ -86,7 +96,9 @@ After each substantive edit, render and inspect:
 - Formula rendering and symbol definitions.
 - Missing images, overlap, clipping, contrast, and small source labels.
 - Numerical values, units, uncertainty, axes, and claim IDs against the evidence index.
-- The 12-minute narration budget or the user's specified duration.
+- The user's specified narration duration, if any. Do not impose a 12-minute cap on a detailed learning deck.
+- English-first/Chinese-second notes on every slide, audience-visible findings and implications, and single-line cover/closing titles.
+- Heading numbering, one correct page total, permanent navigation before fragments advance, and absence of internal locator clutter.
 - Speaker-view notes, appendix navigation, and essential offline behavior when requested.
 - The final PDF, including complete exhibit states and appendix pages.
 
