@@ -1,6 +1,6 @@
 # Confirmed reading and presentation requirements
 
-Apply these defaults to future papers. Let the user's current task override any default. Use the approved Fader–Hardie revision as a style and teaching reference, without copying its results, equations, 46-slide count, or subject-specific structure into unrelated papers.
+Apply these defaults to future papers. Let the user's current task override any default. Use the approved Fader–Hardie revision as a style and teaching reference, without copying its results, equations, 46-slide count, or subject-specific structure into unrelated papers. For empirical papers, also use the visual preferences below without transferring content or numerical results from any reference deck.
 
 ## 1. Select the requested scope
 
@@ -59,7 +59,7 @@ For a model/method paper, consider this sequence:
 - Managerial, theoretical, or methodological implications.
 - Scope, limitations, clear conclusion, and a technical/reference appendix.
 
-Adapt the order to the paper. An empirical study needs its setting, estimand, comparison logic, identification threats, and result evidence. Do not manufacture an irrelevant benchmark or force every paper into a causal design.
+Adapt the order to the paper. An empirical study needs its setting, sample and measurement, estimand or claim type, comparison logic, identification or validity threats, and result evidence. In a multi-study paper, show each study's distinct role before synthesizing. Do not manufacture an irrelevant benchmark or force every paper into a causal design.
 
 ## 5. Write findings and implications substantively
 
@@ -97,6 +97,7 @@ Make the two versions equivalent in meaning. Include actual narration, explanati
 ## 7. Apply the confirmed visual style
 
 - Use a restrained blue academic theme with a very light background, dark blue headings, blue emphasis, and consistent chart colors.
+- For empirical decks, favor clear section hierarchy, generous and balanced whitespace, timelines and comparison diagrams, focused result charts, and selective highlighting of estimates or table cells. The provided example decks are visual references only: do not import their claims, values, graphics, or compact five-page density into another paper. An HTML learning deck may use more slides and larger exhibits.
 - Prefer Avenir Next on macOS, with Helvetica Neue and Arial fallbacks. Use an available consistent alternative if necessary. Keep equations in suitable math fonts and ensure Chinese notes render.
 - Keep the cover's main title on one line. Keep the main closing title on one line as well. Shorten or rephrase an overlong title before reducing it below readable size.
 - Retain paper title, verified authors/venue/year, and the presenter's name. Do not invent the presenter's identity if unknown.
