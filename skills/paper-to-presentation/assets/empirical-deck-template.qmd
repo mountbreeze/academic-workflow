@@ -1,0 +1,224 @@
+---
+format:
+  revealjs:
+    theme: default
+    width: 1050
+    height: 700
+    margin: 0.05
+    title-slide: false
+    center: false
+    slide-number: false
+    controls: false
+    transition: none
+    incremental: false
+    embed-resources: true
+    css: deck.css
+    include-after-body: deck-nav.html
+    html-math-method: katex
+    self-contained-math: true
+    pdf-separate-fragments: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+##  {.cover #title-slide}
+
+::: {.cover-title}
+Replace with a clear one-line title
+:::
+
+::: {.cover-subtitle}
+Replace with the verified paper title
+:::
+
+::: {.cover-byline}
+Verified authors, venue, year
+
+Presented by presenter name
+:::
+
+::: {.notes}
+**English**
+
+Introduce the paper's question and the evidence the audience will examine.
+
+**中文**
+
+介绍论文的研究问题和接下来要检视的证据。
+:::
+
+## Presentation roadmap {.roadmap #roadmap}
+
+1. [Question and research setting](#research-question)
+2. [Study design and comparison](#study-design)
+3. [Results and evidence strength](#main-results)
+4. [Implications and boundaries](#implications)
+5. [Appendix](#appendix-details)
+
+::: {.notes}
+**English**
+
+Explain the route through the studies and the clickable navigation.
+
+**中文**
+
+说明各项研究的讲解顺序及可点击的导航。
+:::
+
+## The research question and early answer {#research-question data-section="1" data-section-title="Question and setting"}
+
+Replace with the paper's question, contribution, and a carefully qualified early answer.
+
+::: {.notes}
+**English**
+
+Explain why this question matters, the prior explanation, and what the paper adds. Cite the verified source location.
+
+**中文**
+
+解释问题的重要性、既有解释及本文的贡献，并标注核实过的来源位置。
+:::
+
+## Setting, sample, and measurement {#setting}
+
+Replace with units, period, sampling, exclusions, exposure, outcomes, and measurement timing. Add a separate study-map slide when the paper contains multiple studies.
+
+::: {.notes}
+**English**
+
+Walk through the data-generating setting and what the sample represents. Explain consequential restrictions and missingness.
+
+**中文**
+
+讲清数据产生的场景和样本代表什么，并解释重要的样本限制与缺失情况。
+:::
+
+## Design and comparison logic {#study-design data-section="2" data-section-title="Design and comparison"}
+
+Replace with the actual assignment or exposure process, comparison group, estimand or claim type, and a readable timeline or schematic. For noncausal work, describe the comparison without implying random assignment.
+
+::: {.notes}
+**English**
+
+Explain what is compared, when outcomes are observed, and the assumptions needed for this interpretation.
+
+**中文**
+
+解释比较双方、结果测量时间，以及这种解释所依赖的假设。
+:::
+
+## The key specification or analytic step {#specification}
+
+Use only if the specification is central. Reproduce verified notation and interpret the relevant contrast or coefficient. Split across slides if needed.
+
+::: {.notes}
+**English**
+
+Define every term, reference group, and unit. Explain the estimate on its actual scale and identify any explanatory rewrite.
+
+**中文**
+
+定义所有项、基准组与单位，按正确量纲解释估计值，并说明哪些是辅助性改写。
+:::
+
+## Main result and its magnitude {#main-results data-section="3" data-section-title="Results and evidence"}
+
+Replace with an original exhibit or a chart reconstructed from verified values. State the comparison, magnitude, baseline, and uncertainty in a complete audience-visible sentence.
+
+::: {.notes}
+**English**
+
+Read the exhibit, including its sample and model column. Explain statistical uncertainty and practical size.
+
+**中文**
+
+讲解图表、样本和模型列，并解释统计不确定性及实际量级。
+:::
+
+## Heterogeneity, mechanism, or synthesis {#additional-evidence}
+
+Use the evidence type the paper actually reports. If this is a multi-study paper, synthesize what the studies jointly establish and where they differ.
+
+::: {.notes}
+**English**
+
+Separate confirmed patterns from mechanism interpretations and note any null or mixed result.
+
+**中文**
+
+区分已证实的模式与机制解释，并说明零结果或不一致的结果。
+:::
+
+## The main threat and remaining uncertainty {#threats}
+
+Replace with the most consequential identification, measurement, selection, validation, or generalizability threat and the evidence addressing it.
+
+::: {.notes}
+**English**
+
+Explain what the relevant check reduces and what it cannot settle.
+
+**中文**
+
+解释相关检验降低了哪种疑虑，以及仍不能解决什么问题。
+:::
+
+## Implications and use conditions {#implications data-section="4" data-section-title="Implications and boundaries"}
+
+Replace with separate, concrete theoretical and managerial implications. State the conditions under which the inference or proposed action is warranted.
+
+::: {.notes}
+**English**
+
+Distinguish the authors' conclusion from the presenter's extension, and name information needed before applying the finding elsewhere.
+
+**中文**
+
+区分作者结论和报告者的延伸，并指出将发现用于其他场景前还需要哪些信息。
+:::
+
+## Conclusion and scope {#conclusion .closing}
+
+Replace with a concise, evidence-bounded conclusion and the main boundary of applicability. Keep the main title on one line.
+
+::: {.notes}
+**English**
+
+Close by connecting the question, design, result, and boundary in natural speech.
+
+**中文**
+
+用自然的讲述将研究问题、设计、结果与适用边界连起来。
+:::
+
+## Supporting evidence {.appendix #appendix-details data-section="A" data-section-title="Appendix"}
+
+Replace with full specifications, additional exhibits, robustness checks, or anticipated questions. Add appendix pages as needed.
+
+[Back to conclusion](#conclusion)
+
+::: {.notes}
+**English**
+
+Explain the exhibit or check fully, including its original location and what it does or does not establish.
+
+**中文**
+
+完整解释图表或检验，注明原文位置及它能与不能支持的结论。
+:::
+
+## References {.appendix #references data-section="A"}
+
+Replace with verified bibliographic details. Keep the complete slide-to-source mapping in evidence-index.md.
+
+::: {.notes}
+**English**
+
+Identify the article version and supplementary materials actually inspected.
+
+**中文**
+
+注明实际核查的文章版本与补充材料。
+:::
