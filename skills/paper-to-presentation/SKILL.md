@@ -10,7 +10,7 @@ description: Read academic papers deeply and transform their arguments into evid
 - Select the requested mode: read, storyboard, present, or end-to-end. Do not produce a deck for a reading-only request.
 - Default to detailed Chinese reading explanations, English slides, and bilingual speaker notes on EVERY slide: a complete English narration first, followed by its Chinese counterpart. Override only when the user requests a different language. Keep reusable workflow instructions in English.
 - Preserve original mathematical notation and important English technical terms.
-- For an unspecified presentation brief, use a detailed learning presentation with step-by-step derivations. Set the slide count from the material, without a fixed page cap or a presumed 12-minute limit. When the user specifies a speaking time, create a focused main narrative and place supporting derivations in an appendix or a separate detailed version. State when the detailed version exceeds the requested time.
+- For an unspecified presentation brief, use a detailed learning presentation. Explain the technical core step by step: derivations for model papers, and design, estimands, specifications, and evidence for empirical papers. Set the slide count from the material, without a fixed page cap or a presumed 12-minute limit. When the user specifies a speaking time, create a focused main narrative and place supporting derivations in an appendix or a separate detailed version. State when the detailed version exceeds the requested time.
 - Ask only for missing information that materially prevents useful work. Continue source inspection and reading independently. Do not require approval between ordinary stages; pause after a storyboard only if the user requests a checkpoint.
 - Use available tools rather than assuming a particular model, connector, absolute path, API key, or institutional integration. Do not install software, connect accounts, publish, or modify this skill merely to read a paper.
 - For file deliverables, follow the current environment's storage and artifact instructions. Read the applicable PDF, document, presentation, or visualization guidance before creating those artifacts.
@@ -35,7 +35,7 @@ Explain the following in plain language before technical detail:
 - Setting, sample, units, time period, and studies.
 - Main finding, magnitude where verified, contribution, and scope.
 
-For a multi-study paper, create a study map linking each study to its role. For theory, distinguish assumptions, propositions, and proof strategy. For methodological work, explain the problem, pipeline, validation, and conditions of use. Do not force every paper into a causal empirical template.
+For an empirical or multi-study paper, read [references/empirical-papers.md](references/empirical-papers.md) and create a study map linking each study to its role. For theory, distinguish assumptions, propositions, and proof strategy. For methodological work, explain the problem, pipeline, validation, and conditions of use. Do not force every paper into a causal empirical template.
 
 ## 3. Maintain an evidence ledger
 
@@ -45,7 +45,7 @@ Create a compact ledger shared by the reading notes and the deck:
 | --- | --- | --- | --- | --- | --- |
 | C1 | [Authors' finding, interpretation, or analyst inference] | [Table, figure, equation, proof, or passage] | [Conditions needed] | [Version; section; printed/PDF page; exhibit] | [Verified, partial, or unresolved] |
 
-Assign stable IDs to substantive claims and reuse them in the storyboard and notes. Include units, denominators, sample restrictions, model columns, uncertainty intervals, and significance information when relevant. Do not infer an exact p-value or confidence interval from significance stars alone.
+Assign stable IDs to substantive claims and reuse them in the storyboard and notes. Include units, denominators, sample restrictions, model columns, uncertainty intervals, and significance information when relevant. For empirical claims, also record the estimand or comparison, baseline, outcome scale, inference unit, and whether the value is reported or calculated. Do not infer an exact p-value or confidence interval from significance stars alone.
 
 Separate the authors' statements, the evidence actually inspected, the assistant's interpretation, and speculative extensions. Distinguish association, causal effects, predictions, structural estimates, and theoretical implications. A mechanism consistent with evidence is not automatically an identified mechanism.
 
@@ -64,7 +64,7 @@ For each essential equation, follow this sequence:
 7. Interpret parameters and marginal effects under the actual specification, including interactions, nonlinear links, transformations, and normalization.
 8. State assumptions, limitations, and what changes when a condition fails.
 
-For empirical work, identify assignment, treatment/exposure, comparison, outcome, estimand and target population, timing, inference unit, identification assumptions, and main threats. Explain how the reported evidence addresses each threat and what remains unresolved. Do not select an estimator merely because the paper's topic resembles a familiar design.
+For empirical work, follow references/empirical-papers.md. Identify assignment or exposure, comparison, outcome, estimand and target population, timing, inference unit, identification assumptions, and main threats. Explain how the reported evidence addresses each threat and what remains unresolved. Do not select an estimator merely because the paper's topic resembles a familiar design.
 
 For predictive or structural work, explain the objective, estimation, validation, parameter interpretation, and counterfactual assumptions. For theory, separate intuition, formal statement, proof steps, and comparative statics.
 
@@ -93,7 +93,7 @@ Choose a structure appropriate to the contribution:
 - Theory/model: question, setup, assumptions, core result, intuition, comparative statics, implications and boundaries.
 - Method/framework: problem, pipeline overview, stages with a recurring roadmap, validation, limitations and applications.
 
-In detailed mode, include essential derivations in the main sequence, one logical step per slide. Use an appendix for additional identities, full specifications, robustness, and anticipated questions. In timed-talk mode, move supporting derivations to the appendix to respect the speaking budget. Keep the main conclusion visible at the end of the main narrative.
+In detailed mode, keep the essential reasoning in the main sequence, one logical step per slide: derivations for model papers; study design, comparison logic, coefficient interpretation, and result evidence for empirical papers. Use an appendix for additional identities, full specifications, robustness, and anticipated questions. In timed-talk mode, move supporting derivations to the appendix to respect the speaking budget. Keep the main conclusion visible at the end of the main narrative.
 
 ## 6. Translate evidence into visuals
 
@@ -101,6 +101,7 @@ In detailed mode, include essential derivations in the main sequence, one logica
 | --- | --- |
 | Motivation or gap | Benchmark-versus-unresolved-question comparison |
 | Assignment or experiment | Group and measurement timeline |
+| Observational or quasi-experimental design | Sampling and treatment timeline, comparison logic, and main threat |
 | Identification | Assignment schematic and comparison logic |
 | Equation | Legible equation with progressive term highlighting and a symbol key |
 | Model or method | Compact pipeline with the active stage highlighted |
@@ -150,6 +151,7 @@ Do not create empty deliverables or claim unsupported outputs. Reuse verified wo
 - "Use $paper-to-presentation to prepare a detailed learning presentation. Explain the paper in Chinese, derive its equations step by step, and create blue English slides with English notes above Chinese notes, numbered titles, page counts, and clickable navigation."
 - "Use $paper-to-presentation in end-to-end mode. Explain the paper in Chinese, then create a 12-minute English presentation with bilingual notes (English first). Keep full derivations in the appendix and make findings, implications, and limitations explicit."
 - "Use $paper-to-presentation to produce only a storyboard for this paper, then wait for my feedback before rendering the deck."
+- "Use $paper-to-presentation in end-to-end mode for this empirical paper. Explain the research design and each study in Chinese; then create a detailed blue HTML deck with English slides, English-first/Chinese-second notes, verified results, identification threats, implications, and boundaries. Use the empirical template and my reference slides for visual style only."
 
 ## Attribution
 
