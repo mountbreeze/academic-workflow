@@ -21,9 +21,9 @@ A request for instructions or for this skill to gain rendering support does not 
 
 ## 2. Build the source from the approved storyboard
 
-Read user-requirements.md first. Copy assets/deck-template.qmd into a new presentation project as deck.qmd, and copy assets/deck.css and assets/deck-nav.html alongside it. This uses Quarto's built-in revealjs format, with no upstream custom extension required.
+Read user-requirements.md first. For empirical papers, also read empirical-papers.md and copy assets/empirical-deck-template.qmd into a new presentation project as deck.qmd. For model, theory, or method papers, start from assets/deck-template.qmd. Adapt either starter to the paper's actual contribution; neither is a mandatory slide order. Copy assets/deck.css and assets/deck-nav.html alongside deck.qmd. This uses Quarto's built-in revealjs format, with no upstream custom extension required.
 
-Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. In detailed mode, allocate one logical derivation step per slide without a fixed page cap. In a timed talk, preserve the main-slide timing budget. Include English slide text and complete bilingual notes on every page, with English first and Chinese second.
+Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. In detailed mode, allocate one logical reasoning step per slide without a fixed page cap: derivations for model papers, and design, estimand, evidence, and interpretation for empirical papers. In a timed talk, preserve the main-slide timing budget. Include English slide text and complete bilingual notes on every page, with English first and Chinese second.
 
 Place original or reproducible exhibits in assets/. Keep a compact evidence-index.md linking slide numbers to claim IDs, original exhibit numbers, printed and PDF pages, and visual provenance. Preserve chart-generation code and exact inputs when charts are reconstructed.
 
@@ -96,6 +96,7 @@ After each substantive edit, render and inspect:
 - Formula rendering and symbol definitions.
 - Missing images, overlap, clipping, contrast, and small source labels.
 - Numerical values, units, uncertainty, axes, and claim IDs against the evidence index.
+- For empirical decks, the study map, comparison, outcome timing, claim type, main threat, and applicability boundary against the source; make sure visual emphasis does not conceal null or mixed results.
 - The user's specified narration duration, if any. Do not impose a 12-minute cap on a detailed learning deck.
 - English-first/Chinese-second notes on every slide, audience-visible findings and implications, and single-line cover/closing titles.
 - Heading numbering, one correct page total, permanent navigation before fragments advance, and absence of internal locator clutter.
