@@ -8,7 +8,7 @@ description: Read academic papers deeply and transform their arguments into evid
 ## Operating defaults
 
 - Select the requested mode: read, storyboard, present, or end-to-end. Do not produce a deck for a reading-only request.
-- Default to detailed Chinese reading explanations, English slides, and bilingual speaker notes on EVERY slide: a complete English narration first, followed by its Chinese counterpart. Override only when the user requests a different language. Keep reusable workflow instructions in English.
+- Default to detailed Chinese reading explanations, English slides, and bilingual speaker notes on EVERY slide: a complete English narration first, followed by its Chinese counterpart. Override only when the user requests a different language. Keep reusable workflow instructions in English. Treat the default blue theme as a default; an explicit palette request overrides it.
 - Preserve original mathematical notation and important English technical terms.
 - For an unspecified presentation brief, use a detailed learning presentation. Explain the technical core step by step: derivations for model papers, and design, estimands, specifications, and evidence for empirical papers. Set the slide count from the material, without a fixed page cap or a presumed 12-minute limit. When the user specifies a speaking time, create a focused main narrative and place supporting derivations in an appendix or a separate detailed version. State when the detailed version exceeds the requested time.
 - Ask only for missing information that materially prevents useful work. Continue source inspection and reading independently. Do not require approval between ordinary stages; pause after a storyboard only if the user requests a checkpoint.
@@ -84,7 +84,7 @@ Write a storyboard before slide bodies:
 | --- | --- | --- | --- | --- | --- |
 | 1 | [Question] | [Evidence-bounded takeaway] | [Visual] | [C1; locator] | [Narrative and seconds] |
 
-Read titles in order to check the argument. Use clear, numbered titles whose causal language matches the evidence. Prefer informative statements or descriptive academic titles over slogans; keep necessary nuance in a complete explanatory sentence. Use one primary intellectual task per slide. Adapt the number of slides to the actual time needed for complex exhibits rather than applying a fixed slides-per-minute rule.
+Read titles in order to check the argument. Use clear, numbered titles whose causal language matches the evidence. Prefer informative statements or descriptive academic titles over slogans; keep necessary nuance in a complete explanatory sentence. Give each slide one coherent teaching point. Combine adjacent setup, comparison, or result steps when they form a readable unit; avoid sparse slides that repeat the next page. Keep related evidence and its interpretation together, but split content that would crowd the page. Set the total from the argument and the user's requested density rather than a fixed slides-per-minute rule.
 
 Choose a structure appropriate to the contribution:
 
@@ -93,7 +93,7 @@ Choose a structure appropriate to the contribution:
 - Theory/model: question, setup, assumptions, core result, intuition, comparative statics, implications and boundaries.
 - Method/framework: problem, pipeline overview, stages with a recurring roadmap, validation, limitations and applications.
 
-In detailed mode, keep the essential reasoning in the main sequence, one logical step per slide: derivations for model papers; study design, comparison logic, coefficient interpretation, and result evidence for empirical papers. Use an appendix for additional identities, full specifications, robustness, and anticipated questions. In timed-talk mode, move supporting derivations to the appendix to respect the speaking budget. Keep the main conclusion visible at the end of the main narrative.
+In detailed mode, keep the essential reasoning in the main sequence: derivations for model papers; study design, comparison logic, coefficient interpretation, and result evidence for empirical papers. Group tightly related steps on one slide when legibility and the visual hierarchy allow it. Use an appendix for additional identities, full specifications, robustness, and anticipated questions. In timed-talk mode, move supporting derivations to the appendix to respect the speaking budget. Keep the main conclusion visible at the end of the main narrative.
 
 ## 6. Translate evidence into visuals
 
@@ -124,7 +124,8 @@ Use progressive reveals only to explain a dependency, term, comparison, or stage
 - If the preferred renderer is unavailable, disclose that constraint and use a supported format or deliver verified content and source. Never label unrendered source as a completed, tested deck.
 - Put evidence, key findings, implications, and necessary formal statements on slides. Use complete, clear explanations for findings and figure interpretations instead of slogan-like fragments. Put detailed narration, intuition, transitions, and anticipated caveats in bilingual notes. Keep caveats necessary to interpret a claim visible on the slide.
 - Preserve exact provenance in the evidence index and speaker notes. Do not display internal claim IDs or locator strings such as C4–C5 · §3, pp.87–88 on audience slides. Retain concise human-readable author/year attribution where needed for borrowed exhibits and a formal references appendix. Verify bibliographic metadata rather than generating missing fields from memory.
-- Apply the blue theme, Avenir Next with portable fallbacks, single-line cover and closing titles, section/subsection numbering, and permanent per-slide navigation specified in references/user-requirements.md. Use a single consistent page count including the appendix.
+- Apply the default blue theme unless the user specifies another palette. Preserve Avenir Next with portable fallbacks, single-line cover and closing titles, section/subsection numbering, and permanent per-slide navigation specified in references/user-requirements.md.
+- Keep the title at the top. Vertically center the grouped body between title and footer, as in PowerPoint's Align Middle, without moving the title or navigation. Justify substantial prose paragraphs across the available width; leave tables, equations, narrow labels, and short callouts naturally aligned. Verify this in interactive HTML and the exported PDF. Use a single consistent page count including the appendix.
 - Render and inspect every slide, including reveal states when used. Check clipping, overlap, readable figures, contrast, mathematical rendering, attribution, and appendix links. Revise or split crowded slides instead of shrinking everything.
 - Verify all principal numerical claims and formulas against the ledger. Check that conclusions do not exceed the evidence.
 - Inspect the final PDF separately when exported. Confirm slides with animations retain their full meaning and essential assets. Test offline operation before claiming a deck is offline-ready.
