@@ -51,11 +51,13 @@ Introduce the paper's question and the evidence the audience will examine.
 
 ## Presentation roadmap {.roadmap #roadmap}
 
+::: {.slide-body}
 1. [Question and research setting](#research-question)
 2. [Study design and comparison](#study-design)
 3. [Results and evidence strength](#main-results)
 4. [Implications and boundaries](#implications)
 5. [Appendix](#appendix-details)
+:::
 
 ::: {.notes}
 **English**
@@ -69,7 +71,9 @@ Explain the route through the studies and the clickable navigation.
 
 ## The research question and early answer {#research-question data-section="1" data-section-title="Question and setting"}
 
+::: {.slide-body}
 Replace with the paper's question, contribution, and a carefully qualified early answer.
+:::
 
 ::: {.notes}
 **English**
@@ -83,7 +87,9 @@ Explain why this question matters, the prior explanation, and what the paper add
 
 ## Setting, sample, and measurement {#setting}
 
+::: {.slide-body}
 Replace with units, period, sampling, exclusions, exposure, outcomes, and measurement timing. Add a separate study-map slide when the paper contains multiple studies.
+:::
 
 ::: {.notes}
 **English**
@@ -97,7 +103,9 @@ Walk through the data-generating setting and what the sample represents. Explain
 
 ## Design and comparison logic {#study-design data-section="2" data-section-title="Design and comparison"}
 
+::: {.slide-body}
 Replace with the actual assignment or exposure process, comparison group, estimand or claim type, and a readable timeline or schematic. For noncausal work, describe the comparison without implying random assignment.
+:::
 
 ::: {.notes}
 **English**
@@ -111,7 +119,9 @@ Explain what is compared, when outcomes are observed, and the assumptions needed
 
 ## The key specification or analytic step {#specification}
 
+::: {.slide-body}
 Use only if the specification is central. Reproduce verified notation and interpret the relevant contrast or coefficient. Split across slides if needed.
+:::
 
 ::: {.notes}
 **English**
@@ -125,7 +135,9 @@ Define every term, reference group, and unit. Explain the estimate on its actual
 
 ## Main result and its magnitude {#main-results data-section="3" data-section-title="Results and evidence"}
 
+::: {.slide-body}
 Replace with an original exhibit or a chart reconstructed from verified values. State the comparison, magnitude, baseline, and uncertainty in a complete audience-visible sentence.
+:::
 
 ::: {.notes}
 **English**
@@ -139,7 +151,9 @@ Read the exhibit, including its sample and model column. Explain statistical unc
 
 ## Heterogeneity, mechanism, or synthesis {#additional-evidence}
 
+::: {.slide-body}
 Use the evidence type the paper actually reports. If this is a multi-study paper, synthesize what the studies jointly establish and where they differ.
+:::
 
 ::: {.notes}
 **English**
@@ -153,7 +167,9 @@ Separate confirmed patterns from mechanism interpretations and note any null or 
 
 ## The main threat and remaining uncertainty {#threats}
 
+::: {.slide-body}
 Replace with the most consequential identification, measurement, selection, validation, or generalizability threat and the evidence addressing it.
+:::
 
 ::: {.notes}
 **English**
@@ -167,7 +183,9 @@ Explain what the relevant check reduces and what it cannot settle.
 
 ## Implications and use conditions {#implications data-section="4" data-section-title="Implications and boundaries"}
 
+::: {.slide-body}
 Replace with separate, concrete theoretical and managerial implications. State the conditions under which the inference or proposed action is warranted.
+:::
 
 ::: {.notes}
 **English**
@@ -181,7 +199,9 @@ Distinguish the authors' conclusion from the presenter's extension, and name inf
 
 ## Conclusion and scope {#conclusion .closing}
 
+::: {.slide-body}
 Replace with a concise, evidence-bounded conclusion and the main boundary of applicability. Keep the main title on one line.
+:::
 
 ::: {.notes}
 **English**
@@ -195,9 +215,11 @@ Close by connecting the question, design, result, and boundary in natural speech
 
 ## Supporting evidence {.appendix #appendix-details data-section="A" data-section-title="Appendix"}
 
+::: {.slide-body}
 Replace with full specifications, additional exhibits, robustness checks, or anticipated questions. Add appendix pages as needed.
 
 [Back to conclusion](#conclusion)
+:::
 
 ::: {.notes}
 **English**
@@ -211,7 +233,9 @@ Explain the exhibit or check fully, including its original location and what it 
 
 ## References {.appendix #references data-section="A"}
 
+::: {.slide-body}
 Replace with verified bibliographic details. Keep the complete slide-to-source mapping in evidence-index.md.
+:::
 
 ::: {.notes}
 **English**
