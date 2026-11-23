@@ -46,7 +46,7 @@ For numerical headline results, reconstruct the complete calculation: inputs, su
 
 ## 4. Organize the presentation around explanation
 
-Default to English audience-facing slides and one primary intellectual step per page. In detailed mode, keep the important derivation steps in the main deck rather than hiding the entire explanation in an appendix.
+Default to English audience-facing slides. Give each page a coherent teaching point and merge adjacent short steps when the comparison, evidence, and interpretation can be read together. A slide should be meaningfully filled without crowding; split dense material instead of shrinking it. In detailed mode, keep important derivation steps in the main deck rather than hiding the entire explanation in an appendix.
 
 For a model/method paper, consider this sequence:
 - Conventional calculation or benchmark.
@@ -96,9 +96,11 @@ Make the two versions equivalent in meaning. Include actual narration, explanati
 
 ## 7. Apply the confirmed visual style
 
-- Use a restrained blue academic theme with a very light background, dark blue headings, blue emphasis, and consistent chart colors.
+- Use a restrained blue academic theme by default, with a very light background, dark headings, and consistent chart colors. When the user specifies another color theme, adapt the entire palette coherently while preserving contrast and academic restraint.
 - For empirical decks, favor clear section hierarchy, generous and balanced whitespace, timelines and comparison diagrams, focused result charts, and selective highlighting of estimates or table cells. The provided example decks are visual references only: do not import their claims, values, graphics, or compact five-page density into another paper. An HTML learning deck may use more slides and larger exhibits.
 - Prefer Avenir Next on macOS, with Helvetica Neue and Arial fallbacks. Use an available consistent alternative if necessary. Keep equations in suitable math fonts and ensure Chinese notes render.
+- Keep the slide title at the top; vertically center the body as a grouped block within the region between the title and permanent footer. Match PowerPoint's vertical Align Middle for body content, including table-plus-interpretation groups. Use a print-safe layout and check both HTML and PDF; do not center the title or footer.
+- Set substantial prose paragraphs to justified alignment across a generous width. Preserve natural alignment for short callouts, equations, tables, and narrow columns; avoid stretched spacing in a single-line sentence.
 - Keep the cover's main title on one line. Keep the main closing title on one line as well. Shorten or rephrase an overlong title before reducing it below readable size.
 - Retain paper title, verified authors/venue/year, and the presenter's name. Do not invent the presenter's identity if unknown.
 - Omit generic cover descriptions such as "A paper discussion with step-by-step derivations."
@@ -128,7 +130,7 @@ Check:
 - Key findings and implications are visible and clearly expressed.
 - Single-line cover and closing titles, consistent heading numbering, exact page count, and absence of internal locator clutter.
 - All navigation routes, including initial page state and appendix return links.
-- Every rendered slide and relevant reveal states for clipping, overlap, mathematical errors, chart readability, and footer clearance.
+- Every rendered slide and relevant reveal states for clipping, overlap, mathematical errors, chart readability, title/body/footer clearance, and body vertical alignment. Check the PDF separately because browser print CSS can override positioning or split transformed blocks.
 - Static PDF independently for page count, final-state exhibits, formula rendering, and link destinations.
 - Offline assets only when offline readiness is claimed.
 
