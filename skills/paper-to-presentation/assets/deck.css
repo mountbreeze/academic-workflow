@@ -24,3 +24,13 @@
 .reveal .slide-number,.reveal .slide-number-pdf {display:none!important;}
 .reveal .interpretation {font-size:.8em;line-height:1.5;border-top:2px solid var(--paper-rule);padding-top:.6em;margin-top:.7em;color:#10466f;}
 @media print {.reveal .deck-nav {display:flex!important;} .reveal .slide-number,.reveal .slide-number-pdf {display:none!important;}}
+
+/* Keep headings and navigation fixed; center the grouped audience content. */
+.reveal .slides section:not(.cover)>.slide-body {position:absolute!important;top:70px!important;bottom:35px!important;left:0!important;right:0!important;transform:none!important;width:100%!important;display:flex!important;flex-direction:column!important;justify-content:center!important;}
+.reveal .slides section:not(.cover)>.slide-body>table {margin:0 0 10px!important;}
+.reveal .slides .justified,.reveal .slides p.lead {text-align:justify;text-justify:inter-word;hyphens:auto;}
+@media print {
+  .reveal .slides section {position:relative!important;height:650px!important;min-height:650px!important;}
+  .reveal .slides section:not(.cover)>.slide-body {position:absolute!important;top:70px!important;bottom:35px!important;left:0!important;right:0!important;transform:none!important;width:100%!important;display:flex!important;flex-direction:column!important;justify-content:center!important;}
+  .reveal .deck-nav {display:flex!important;position:absolute!important;bottom:8px!important;left:0!important;right:0!important;}
+}
