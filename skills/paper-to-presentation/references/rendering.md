@@ -23,11 +23,13 @@ A request for instructions or for this skill to gain rendering support does not 
 
 Read user-requirements.md first. For empirical papers, also read empirical-papers.md and copy assets/empirical-deck-template.qmd into a new presentation project as deck.qmd. For model, theory, or method papers, start from assets/deck-template.qmd. Adapt either starter to the paper's actual contribution; neither is a mandatory slide order. Copy assets/deck.css and assets/deck-nav.html alongside deck.qmd. This uses Quarto's built-in revealjs format, with no upstream custom extension required.
 
-Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. In detailed mode, allocate one logical reasoning step per slide without a fixed page cap: derivations for model papers, and design, estimand, evidence, and interpretation for empirical papers. In a timed talk, preserve the main-slide timing budget. Include English slide text and complete bilingual notes on every page, with English first and Chinese second.
+Create the actual main slides and appendix from the approved plan. Replace all instructional content in the template. In detailed mode, allocate a coherent reasoning unit to each slide without a fixed page cap: derivations for model papers, and design, estimand, evidence, and interpretation for empirical papers. Merge adjacent short slides when they form one readable explanation; split again if the result cannot fit at a comfortable size. In a timed talk, preserve the main-slide timing budget. Include English slide text and complete bilingual notes on every page, with English first and Chinese second.
 
 Place original or reproducible exhibits in assets/. Keep a compact evidence-index.md linking slide numbers to claim IDs, original exhibit numbers, printed and PDF pages, and visual provenance. Preserve chart-generation code and exact inputs when charts are reconstructed.
 
 Use Markdown headings beginning with ## for slides. Add stable heading IDs for appendix navigation. Keep exact source pages/exhibits and internal claim IDs in the evidence index and notes, rather than in audience-facing source footers. Retain necessary concise attribution for reproduced exhibits and a formal references appendix. A verified .bib file is optional for a single-paper talk; if used, configure bibliography and validate its metadata.
+
+Place audience content below the heading in a `::: {.slide-body}` fenced div, ending it before the notes block. The title remains at the top while the body is centered as a grouped block between heading and footer. For HTML/PDF consistency, use a fixed content region with flex centering rather than a translated absolute block; browser printing can split transformed content. Keep substantive long prose justified, while tables and short labels retain natural alignment. Render a dense table page and a long-paragraph page in both modes before treating the layout as reusable.
 
 Keep notes inside:
 ```markdown
@@ -44,7 +46,7 @@ Write the speaker's actual English narration here.
 
 Keep a separate speaker-notes.md with the same English-first, Chinese-second order on each page as a fallback. Notes embedded in HTML can be read by anyone who receives the source or HTML, even though they are absent from the audience slide view.
 
-The template includes a blue theme, heading numbering, permanent linked navigation and one whole-deck page counter. For each section start, set data-section to its number and data-section-title to its label on the heading. Mark appendix slides with data-section="A" and class appendix. Keep IDs stable. The cover uses an unnumbered empty heading and a one-line .cover-title block. Keep .no-stage on navigation if adding another staging filter, and test that no ancestor hides the navigation in an initial slide state.
+The template includes a blue default theme, heading numbering, permanent linked navigation and one whole-deck page counter. Override its palette when the user requests another theme. For each section start, set data-section to its number and data-section-title to its label on the heading. Mark appendix slides with data-section="A" and class appendix. Keep IDs stable. The cover uses an unnumbered empty heading and a one-line .cover-title block. Keep .no-stage on navigation if adding another staging filter, and test that no ancestor hides the navigation in an initial slide state.
 
 The navigation include generates actual same-document anchor links on every slide after Reveal initializes. It numbers content headings from their section attributes and computes the page count from the current deck. It does not rely on a custom upstream theme. Test generated controls in both the interactive deck and browser print mode.
 
@@ -94,14 +96,14 @@ After each substantive edit, render and inspect:
 - Every main and appendix slide at presentation size.
 - All reveal states used to explain reasoning.
 - Formula rendering and symbol definitions.
-- Missing images, overlap, clipping, contrast, and small source labels.
+- Missing images, overlap, clipping, contrast, small source labels, and whether the grouped body sits between the title and footer with balanced vertical space.
 - Numerical values, units, uncertainty, axes, and claim IDs against the evidence index.
 - For empirical decks, the study map, comparison, outcome timing, claim type, main threat, and applicability boundary against the source; make sure visual emphasis does not conceal null or mixed results.
 - The user's specified narration duration, if any. Do not impose a 12-minute cap on a detailed learning deck.
 - English-first/Chinese-second notes on every slide, audience-visible findings and implications, and single-line cover/closing titles.
 - Heading numbering, one correct page total, permanent navigation before fragments advance, and absence of internal locator clutter.
 - Speaker-view notes, appendix navigation, and essential offline behavior when requested.
-- The final PDF, including complete exhibit states and appendix pages.
+- The final PDF, including complete exhibit states and appendix pages. Inspect all pages for print-only overflow, body displacement, and footer collisions; DOM fit checks in the interactive deck alone are insufficient.
 
 Do not report an automated fit, staging, or offline gate as passed unless the relevant tool was actually run. No custom validation scripts are bundled with this skill. Use available browser inspection tools or manual review and report the scope precisely.
 
