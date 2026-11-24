@@ -61,6 +61,15 @@ For a model/method paper, consider this sequence:
 
 Adapt the order to the paper. An empirical study needs its setting, sample and measurement, estimand or claim type, comparison logic, identification or validity threats, and result evidence. In a multi-study paper, show each study's distinct role before synthesizing. Do not manufacture an irrelevant benchmark or force every paper into a causal design.
 
+### Opening roadmap and academic titles for empirical decks
+
+- Make the opening contents page a concise, clickable English mind map of the paper's core argument, not a compressed list of every section or slide. Its purpose is to let the audience see how the research question leads to evidence, explanations, and validation.
+- Select nodes from the paper's actual contribution. Useful candidates are the research question, principal effect or finding, heterogeneity, each central proposed mechanism, and robustness or alternative explanations. Include only nodes that advance the argument; change their order and count to match the paper. Do not invent heterogeneity or mechanisms merely to complete a template.
+- Keep each node to one short, precise English concept, question, or conclusion. For example, a mechanism node may simply say `Mechanism 1: “Lowering Customer Inertia”`. Put estimates, qualifications, and explanations on the linked slide and in notes, not inside the node.
+- Omit standalone nodes for background items such as research setting, managerial implications, or a repeated main takeaway when they do not help explain the central chain. Omitting a roadmap node does not omit that content from the presentation. Preserve essential design and implications in the main deck.
+- Show the logic with a small number of clear arrows or branches. Link every node to a stable destination slide, retain the permanent footer navigation, and verify the links in the rendered HTML and exported PDF where supported. Keep the map legible at normal presentation size; simplify the map before reducing type size.
+- Use precise academic language in each major slide title. Name the type of evidence or analysis, such as `Treatment Effect Heterogeneity`, `Mechanism 1: “Lowering Customer Inertia”`, or `Robustness to Alternative Specifications`, when supported by the paper. Avoid vague question headlines and do not present a proposed mechanism as an identified causal pathway.
+
 ## 5. Write findings and implications substantively
 
 Include audience-visible findings and implications, not only notes about them.
@@ -106,6 +115,7 @@ Make the two versions equivalent in meaning. Include actual narration, explanati
 - Omit generic cover descriptions such as "A paper discussion with step-by-step derivations."
 - Do not put internal evidence labels or dense locator strings such as "C4–C5 · §3, pp.87–88" on audience slides. Preserve full traceability in notes and evidence-index.md, plus formal references. Keep essential exhibit attribution.
 - Use informative titles and complete explanatory figure interpretations. Avoid oversized slogan bands that crowd a chart.
+- In newly written prose, examples, and labels, use fewer em dashes and en dashes. Prefer quotation marks for named ideas and short phrases, and colons for a title followed by its topic when these make the relation clearer. Do not add quotation marks mechanically or alter original quotations, mathematical notation, or established terminology.
 - Preserve native editable LaTeX formulas. Do not turn formulas into screenshots merely to control layout.
 - Add parameter-distribution or sensitivity visualizations when central to understanding a model. For a probability mixture model, show meaningful parameter contrasts and, when useful, comparisons holding the mean fixed. This is a conditional requirement, not a mandate to add alpha/beta charts to every paper.
 - Label density versus probability, simulation versus data, normalization, clipping, and model assumptions where relevant. Pair useful interactive controls with a meaningful static export.
